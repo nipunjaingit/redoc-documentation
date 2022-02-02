@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: give permission
+      run: chmod=+x ./make.sh
     - name: Build docs
       run: ./make.sh
     - name: Deploy to GitHub Pages
